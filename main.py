@@ -2,7 +2,7 @@ import discord
 import os
 import random
 
-
+#getting the random highlight
 with open("My Clippings.txt", "r+") as digest:
        digest_content = digest.read()
        digest_list = digest_content.split('==========')
@@ -10,8 +10,7 @@ with open("My Clippings.txt", "r+") as digest:
        random_num = random.randint(0, digest_count) 
        one_message = (digest_list[random_num])
 
-kindle = digest_content
-
+#discord bot
 client = discord.Client()
 
 @client.event
